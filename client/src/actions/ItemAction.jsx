@@ -4,7 +4,6 @@ export const getAllitems=()=>async dispatch=>{
     dispatch({type:'GET_ITEMS_REQ'})
     try {
         const response=await axios.get('https://satvikbackend.onrender.com/api/items/getallitems')
-        console.log(response)
         dispatch({type:'GET_ITEMS_SUCCESS',payload :response.data})
     }catch(error){
         dispatch({type:"GET_ITEMS_FAILED",payload : error})
@@ -37,7 +36,6 @@ export const filterP=(searchkey,category)=>async dispatch=>{
     
     dispatch({type:'GET_ITEMS_REQ'})
       let  filterdItem1;
-    //   console.log('hellow')
     try{
         console.log(searchkey,category)
         
