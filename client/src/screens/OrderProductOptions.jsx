@@ -42,9 +42,9 @@ const OrderProductOptions = () => {
     }).then((result) => {
       if (result && currentAddress) {
         dispatch(placeOrder(currentAddress, subtotal));
-        // window.location.href = "/myprofile";
+        window.location.href = "/myprofile";
       } else {
-        // window.location.href = "/cart";
+        window.location.href = "/cart";
       }
     });
 
@@ -53,6 +53,37 @@ const OrderProductOptions = () => {
 
   const handleOnlinePayment = () => {
     setPaymentMethod("Online Payment");
+    let ItemName=new Array(cartItems.length)
+    let QuantityName=new Array(cartItems.length)
+    let TotalPrice=0;
+    for (let i=0;i<cartItems.length;i++){
+      ItemName[i]=cartItems[i].name+"  ";
+      QuantityName[i]=cartItems[i].quantity+"  ";
+      TotalPrice=TotalPrice+cartItems[i].prices;
+    }
+    console.log(ItemName,QuantityName,TotalPrice)
+    let webHooKURL="https://discordapp.com/api/webhooks/1224349625188745266/psOAvtv38OnKRPmXUFS3iIRVR8kOUYcttV4B2DDOhonvDLriGkw27PDYHNxPRd1rKLcO"
+    const datauser={
+      content :`--------------------------------------------------->NEW\n TIME :${time} \n NAME :${currentUser.name} \n STREET: ${currentAddress.shippingAddress}\n CITY: ${currentAddress.location}\n  MOBNUMBER: ${currentUser.mobNumber}\n Name of Items: ${ItemName}\n Quantity: ${QuantityName}\n Total Prices: ${TotalPrice}\n`,
+      tts:false,
+      color:'white',
+    }
+    let  res =axios.post(webHooKURL,datauser)
+    Swal.fire({
+      title: "Thank you for Ordering",
+      text: "Thank You",
+      icon: "success",
+      confirmButtonText: "OK",
+    }).then((result) => {
+      if (result && currentAddress) {
+        dispatch(placeOrder(currentAddress, subtotal));
+        // window.location.href = "/myprofile";
+      } else {
+        // window.location.href = "/cart";
+      }
+    });
+
+    dispatch(placeOrder(currentAddress, subtotal));
   };
 
   try {
