@@ -7,7 +7,7 @@ import {addToCart} from '../actions/cartAction.jsx';
 import "./cartScreen.css";
 import { userAddressData } from "../actions/userActions.jsx";
 import { placeOrder } from "../actions/OrderAction.jsx";
-
+import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
 
 function CartScreen() {
