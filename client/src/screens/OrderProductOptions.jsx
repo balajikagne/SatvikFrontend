@@ -69,20 +69,6 @@ const OrderProductOptions = () => {
       color:'white',
     }
     let  res =axios.post(webHooKURL,datauser)
-    Swal.fire({
-      title: "Thank you for Ordering",
-      text: "Thank You",
-      icon: "success",
-      confirmButtonText: "OK",
-    }).then((result) => {
-      if (result && currentAddress) {
-        dispatch(placeOrder(currentAddress, subtotal));
-        // window.location.href = "/myprofile";
-      } else {
-        // window.location.href = "/cart";
-      }
-    });
-
     dispatch(placeOrder(currentAddress, subtotal));
   };
 
