@@ -232,7 +232,7 @@
         flex-direction: column;
         gap: 20%;
     }
-     .first_box >.box3_shop {
+    .first_box >.box3_shop {
         display:flex;
         flex-direction: column;
         justify-content: center;
