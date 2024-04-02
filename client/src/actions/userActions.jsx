@@ -4,7 +4,7 @@ export const registerUser=(userData)=>async dispatch=>{
     dispatch({type:'USER_REGISTER_REQ'})
     // console.log(userData)
     try{
-        const response=await axios.post('http://127.0.0.1:5002/api/users/register',userData)
+        const response=await axios.post('https://satvikbackend.onrender.com/api/users/register',userData)
         dispatch({type:'USER_REGISTER_SUCCESS'})
     
         Swal.fire({
@@ -29,7 +29,7 @@ export const userAddress=(userAddress)=>async dispatch=>{
     dispatch({type:'USER_SETADDRESS_REQ'})
     // console.log(userAddress)
     try{
-        const response=await axios.post('http://127.0.0.1:5002/api/users/useraddress',userAddress)
+        const response=await axios.post('https://satvikbackend.onrender.com/api/users/useraddress',userAddress)
         
         dispatch({type:'USER_SETADDRESS_SUCCESS'})
     }
@@ -40,7 +40,7 @@ export const userAddress=(userAddress)=>async dispatch=>{
 export const upDateuserAddress=(userAddress)=>async dispatch=>{
     dispatch({type:'USER_SETADDRESS_REQ'})
     try{
-        const response=await axios.post('http://127.0.0.1:5002/api/users/updateuseraddress',userAddress)
+        const response=await axios.post('https://satvikbackend.onrender.com/api/users/updateuseraddress',userAddress)
         
         dispatch({type:'USER_SETADDRESS_SUCCESS'})
         window.location.href='/myprofile'
@@ -52,7 +52,7 @@ export const upDateuserAddress=(userAddress)=>async dispatch=>{
 export const userAddressData=(userId)=>async dispatch=>{
     dispatch({type:'USER_ADDRESS_REQ'})
     try{
-        const response=await axios.post('http://127.0.0.1:5002/api/users/useraddressData',{userId})
+        const response=await axios.post('https://satvikbackend.onrender.com/api/users/useraddressData',{userId})
         dispatch({type:'USER_ADDRESS_SUCCESS',payload:response.data})
     }
     catch(error){
@@ -63,7 +63,7 @@ export const loginUser=(userdata)=>async dispatch=>{
     console.log(userdata)
     dispatch({type:'USER_LOGIN_REQ'})
     try{
-        const response=await axios.post('http://127.0.0.1:5002/api/users/login',userdata)
+        const response=await axios.post('https://satvikbackend.onrender.com/api/users/login',userdata)
         dispatch({type:'USER_LOGIN_SUCCESS',payload: response.data})
         localStorage.setItem('currentUser',JSON.stringify(response.data))
 
