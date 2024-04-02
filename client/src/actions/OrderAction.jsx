@@ -16,7 +16,6 @@ export const placeOrder = (token, subtotal) => async (dispatch, getState) => {
     // }
   } catch (error) {
     dispatch({ type: "PLACE_ORDER_FAILED" });
-    console.log(error);
   }
 };
 
