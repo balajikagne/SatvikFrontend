@@ -1,0 +1,167 @@
+
+.maintag {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+.subtag {
+  font-size: 60px;
+  font-family: 'Signika', sans-serif;
+  font-weight: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* margin-left: 20px; Adjusted margin for better spacing */
+  margin-top: -80px;
+}
+
+.subtag2 {
+  width: 100%;
+  margin-left: 20px; /* Adjusted margin for better spacing */
+  font-family: 'Signika', sans-serif;
+  line-height: 23px;
+}
+
+a {
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+  color: #e95095;
+}
+
+.date {
+  color: grey;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+
+.mark {
+  color: grey;
+}
+
+.postedon {
+  font-size: 20px;
+  margin-top: -60px;
+}
+
+.This_data{
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.title {
+  font-size: 47px;
+  padding: 20px;
+  font-family: 'Signika', sans-serif;
+  font-weight: bold;
+}
+
+.content {
+  font-size: 18px;
+  font-family: 'Signika', sans-serif;
+  line-height: 26px;
+}
+
+.wrap {
+  font-family: 'Signika', sans-serif;
+  font-weight: bold;
+  padding: 30px;
+  text-align: center;
+  text-decoration: underline blue;
+}
+
+.prevtag {
+  font-size: 30px;
+  color: grey;
+  font-weight: bolder;
+}
+
+.grey {
+  margin-top: 7px;
+  margin-left: 14px;
+  font-size: medium;
+  font-weight: bold;
+  color: grey;
+}
+
+.prevpost {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid rgb(197, 194, 194);
+  padding: 30px;
+  margin-top: 30px;
+  border-bottom: 1px solid rgb(197, 194, 194);
+}
+
+.comment {
+  font-size: medium;
+  margin-top: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .maintag {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .subtag,
+  .subtag2 {
+    width: 50%;
+    margin-left: 0; /* Reset margin for better alignment */
+  }
+
+  .This_data {
+    width: 80%; /* Adjust image width for larger screens */
+  }
+}
+/* .form-container1 {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+.form-container1 .form-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container1 .form-textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container1 .form-submit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container1 .form-submit:hover {
+  background-color: #45a049;
+}
+
+.form-container1 .form-submit:focus {
+  outline: none;
+}
+
+/* Optional: Add styles for invalid inputs */

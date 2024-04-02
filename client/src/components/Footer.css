@@ -1,0 +1,121 @@
+@media (min-width:768px){
+    .Footer_Container{
+        margin-top: 80px;
+        width: 100%;
+        height: 300px;
+        display: flex;
+       
+    }
+    .Footer_box_1{
+        padding-left: 40px;
+        width: 60%;
+        height: 100px;
+    }
+    .Footer_box_1 >img{
+        height: 120px;
+        width: 120px;
+    }
+    .Footer_box_2{
+        width: 60%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    .Footer_box_3{
+        padding-right:40px;
+        width: 60%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    .Footer_box_2 > a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+    }
+    .Footer_box_2 > a:hover{
+        text-decoration: none;
+        color: rgb(32, 176, 205);
+        font-size: 1.2rem;
+    }
+    .social_media{
+        display: flex;
+        gap: 20px;
+    }
+    .social_media > i{
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .social_media > i:hover{
+        font-size: 30px;
+        cursor: pointer;
+        color: aqua;
+    }
+}
+@media (max-width:768px){
+    .Footer_Container{
+        margin-top: 80px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+       
+    }
+    .Footer_box_1{
+        
+        width: 100%;
+        height: 200px;
+    }
+    .Footer_box_1 >img{
+        height: 120px;
+        width: 120px;
+    }
+    .Footer_box_2{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    .Footer_box_3{
+    
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    .Footer_box_2 > a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+    }
+    .Footer_box_2 > a:hover{
+        text-decoration: none;
+        color: rgb(32, 176, 205);
+        font-size: 1.2rem;
+    }
+    .social_media{
+        display: flex;
+        gap: 20px;
+    }
+    .social_media > i{
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .social_media > i:hover{
+        font-size: 30px;
+        cursor: pointer;
+        color: aqua;
+    }
+}

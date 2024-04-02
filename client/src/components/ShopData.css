@@ -1,0 +1,123 @@
+@media (min-width:768px){
+    .ShapData_Container{
+        height: 450px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgb(206, 206, 206);
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .ShopData_Inner_Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ShopData_Inner_Container > img{
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+    }
+    .Shop_Container{
+      
+        border-radius: 10px;
+        background-color: #00ffff;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1rem;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .container_filter {
+        background-color: #f5f5f5;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      
+      .childern_1,
+      .childern_2 {
+        flex: 1;
+        margin-bottom: 10px;
+      }
+      
+      .childern_1 p {
+        margin: 0;
+        font-size: 14px;
+        color: #555;
+      }
+      
+      .childern_2 select {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 100%;
+        background-color: #fff;
+        cursor: pointer;
+      }
+}
+@media (max-width:760px)
+{
+    .ShapData_Container{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+    .ShopData_Inner_Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ShopData_Inner_Container > img{
+        height: 150px;
+        width: 150px;
+        border-radius: 10px;
+    }
+    .Shop_Container{
+      
+        border-radius: 10px;
+        background-color: #00ffff;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1rem;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .container_filter {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .childern_1,
+      .childern_2 {
+        width: 100%;
+      }
+    
+      .childern_2 {
+        margin-top: 10px;
+      }
+      .childern_2 select {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 60%;
+        background-color: #fff;
+        cursor: pointer;
+      }
+}
+.price_box{
+    display: flex;
+    gap: 10px;
+}

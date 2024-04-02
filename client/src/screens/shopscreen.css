@@ -1,0 +1,303 @@
+@media (min-width: 770px) {
+    .Shop_container {
+        width: 100%;
+        height: 260vh;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 350px;
+        margin-top: 10px;
+    }
+
+    .inner_container {
+        position: relative;
+        top: 200px;
+        width: 100%;
+        height: 100%;
+        background-color: #d1d9e043;
+        box-shadow: 1px -1px 1px 0px rgb(160, 151, 151);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align items at the start */
+        padding: 50px;
+        gap: 40px;
+        padding-bottom: 100px;
+    }
+
+    
+    .second_box {
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+    }
+
+    .first_box {
+        width: 40%;
+        height: 100%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .first_box > .box1,
+    .first_box > .box2,
+    .first_box > .box3 {
+        width: 100%;
+        height: 200px;
+    }
+   
+        
+    .prize_adjust {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .first_box > .box2 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40%;
+        width: 100%;
+    }
+    .first_box > .box2 >.cname{
+        display: flex;
+        flex-direction: column;
+        gap: 20%;
+    }
+    .first_box > .box2 >.cvalues{
+        display: flex;
+        flex-direction: column;
+        gap: 20%;
+    }
+
+    .first_box > .box3 > p {
+        font-size: 1.7rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .first_box > .box3 > .child_box {
+        height: 450px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .first_box > .box3 > .child_box > img {
+        height: 300px;
+        width: 90%;
+    }
+
+    .first_box > .box3 > .child_box > h4 {
+        font-size: 1.3rem;
+    }
+
+    .first_box > .box3 > .child_box > div {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: -20px;
+    }
+
+    .Second_box_child {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        gap: 20px;
+    }
+    .next_btn_box1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -150px;
+        position: relative;
+        z-index: 1000;
+
+    }
+    
+    .next_btn_box1 button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        font-size: 1.2rem;
+    }
+    .next_btn_box1 > button:hover {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        font-size: 1.2rem;
+        transition: 0.4s;
+        background-color: #635130;
+    }
+    .container_filter {
+        background-color: #f5f5f5;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      
+      .childern_1,
+      .childern_2 {
+        flex: 1;
+        margin-bottom: 10px;
+      }
+      
+      .childern_1 p {
+        margin: 0;
+        font-size: 14px;
+        color: #555;
+      }
+      
+      .childern_2 select {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 100%;
+        background-color: #fff;
+        cursor: pointer;
+      }
+}
+
+@media (max-width:770px){
+    .Shop_container{
+        width: 100%;
+        height: 100%;
+        margin-top: 100px;
+        margin-bottom: 150px;
+    }
+    /* .inner_container{
+        display:inline;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    } */
+    .first_box{
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .first_box > .box1{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .first_box > .box1>.prize_adjust{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .first_box > .box2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40%;
+        width: 100%;
+    }
+    .first_box > .box2 >.cname{
+        display: flex;
+        flex-direction: column;
+        gap: 20%;
+    }
+    .first_box > .box2 >.cvalues{
+        display: flex;
+        flex-direction: column;
+        gap: 20%;
+    }
+    .first_box >.box3 {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .next_btn_box1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -150px;
+        position: relative;
+        z-index: 1000;
+
+    }
+    
+    .next_btn_box1 button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        font-size: 1.2rem;
+    }
+    .next_btn_box1 > button:hover {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        font-size: 1.2rem;
+        transition: 0.4s;
+        background-color: #635130;
+    }
+    .Second_box_child{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .container_filter{
+        display: flex;
+        width: 100%;
+        height: 150px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 10%;
+        margin-bottom: 50px;
+        padding-left: 20px;
+    }
+    .childern_1{
+        display: flex;
+        width: 180px;
+    }
+    #this_is_select{
+        height: 50px;
+        width: 180px;
+    }
+    #this_is_select:hover{
+        height: 50px;
+        width: 180px;
+    }
+}

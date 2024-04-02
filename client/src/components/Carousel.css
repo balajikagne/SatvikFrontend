@@ -1,0 +1,85 @@
+@media (min-width:786px){
+    .Carsoul_container{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    @keyframes slide {
+        from {
+            transform: translateX(100%);
+        }
+        to{
+            transform: translateX(-490%);
+        }
+    }
+    .posters{
+        overflow: hidden;
+        padding: 60px 0;
+        background: white;
+    }
+    .posters:hover .logos-slide{
+        animation-play-state: paused;
+    }
+    .logos-slide{
+        height: 300px;
+        display: flex;
+        /* white-space: nowrap; */
+        animation: 30s slide infinite linear;
+    }
+    .logos-slide > .box1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logos-slide > .box1 >p{
+        font-size: 20px;
+    }
+    .logos-slide > .box1 >img{
+        height: 280px;
+        margin: 0 40px;
+    }
+}
+@media (max-width:786px){
+    .Carsoul_container{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    @keyframes slide {
+        from {
+            transform: translateX(100%);
+        }
+        to{
+            transform: translateX(-1300%);
+        }
+    }
+    .posters{
+        overflow: hidden;
+        padding: 60px 0;
+        background: white;
+    }
+    .posters:hover .logos-slide{
+        animation-play-state: paused;
+    }
+    .logos-slide{
+        height: 200px;
+        display: flex;
+        /* white-space: nowrap; */
+        animation: 20s slide infinite linear;
+    }
+    .logos-slide > .box1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logos-slide > .box1 >p{
+        font-size: 20px;
+    }
+    .logos-slide > .box1 >img{
+        height: 180px;
+        margin: 0 40px;
+    }
+    
+}

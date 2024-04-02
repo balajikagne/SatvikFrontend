@@ -1,0 +1,86 @@
+/* LoginPage.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #f1e9eb, #f4e9e7); /* Gradient background */
+  }
+  
+  .loginBox {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2); /* Box shadow */
+    width: 300px;
+  }
+  
+  .heading {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .loginButton {
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .forgotPassword {
+    text-align: right;
+    margin-top: 10px;
+    color: #888;
+  }
+  
+  .rememberMe {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .rememberMeCheckbox {
+    margin-right: 8px;
+  }
+  
+  .rememberMeLabel {
+    font-size: 14px;
+  }
+  
+  .signupLink {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+  }
+  
+  .signupLink a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .signupLink a:hover {
+    text-decoration: underline;
+  }
+  
