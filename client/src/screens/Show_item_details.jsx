@@ -23,9 +23,9 @@ function Show_item_details() {
      }
   return (
     <>
-      <div className="Shop_container1">
-        <div className="inner_container1">
-          <div className="second_box1">
+      <div className="Shop_container1_item_details">
+        <div className="inner_container1_item_details">
+          <div className="second_box1_item_details">
             <div className="detail_box">
                 <img src={location.state.img} alt={location.state.name} style={{cursor:"pointer"}}/>
                  <div className="information_item">
