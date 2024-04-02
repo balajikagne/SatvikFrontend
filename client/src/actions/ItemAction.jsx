@@ -3,7 +3,7 @@ import axios from 'axios';
 export const getAllitems=()=>async dispatch=>{
     dispatch({type:'GET_ITEMS_REQ'})
     try {
-        const response=await axios.get('http://127.0.0.1:5002/api/items/getallitems')
+        const response=await axios.get('https://satvikbackend.onrender.com/api/items/getallitems')
         console.log(response)
         dispatch({type:'GET_ITEMS_SUCCESS',payload :response.data})
     }catch(error){
@@ -14,7 +14,7 @@ export const getAllitems=()=>async dispatch=>{
 export const getALLBlogs=()=>async dispatch=>{
     dispatch({type:'GET_BLOGS_REQ'})
     try {
-        const response=await axios.get('http://127.0.0.1:5002/api/BLOGS/getallBLOGS')
+        const response=await axios.get('https://satvikbackend.onrender.com/api/BLOGS/getallBLOGS')
         
         dispatch({type:'GET_BLOGS_SUCCESS',payload :response.data})
     }catch(error){
@@ -25,7 +25,7 @@ export const getALLBlogs=()=>async dispatch=>{
 export const getALLOffers=()=>async dispatch=>{
     dispatch({type:'GET_OFFERS_REQ'})
     try {
-        const response=await axios.get('http://127.0.0.1:5002/api/OFFERS/getallOFFERS')
+        const response=await axios.get('https://satvikbackend.onrender.com/api/OFFERS/getallOFFERS')
         
         dispatch({type:'GET_OFFERS_SUCCESS',payload :response.data})
     }catch(error){
@@ -44,7 +44,7 @@ export const filterP=(searchkey,category)=>async dispatch=>{
             
            if (searchkey==='low to high' && category==='all')
            {
-            const res=await axios.get("http://127.0.0.1:5002/api/items/getallitems")
+            const res=await axios.get("https://satvikbackend.onrender.com/api/items/getallitems")
             // filterdItem1=res.data.filter(item=>item.category.toLowerCase()===category);
             let filter2=res.data.sort((a, b) => {
                 const lowestPriceA = Math.min(parseFloat(a.prices), parseFloat(a.prices));
@@ -57,7 +57,7 @@ export const filterP=(searchkey,category)=>async dispatch=>{
            }
            else if (searchkey=='low to high' && category!=='all')
            {
-            const res=await axios.get("http://127.0.0.1:5002/api/items/getallitems")
+            const res=await axios.get("https://satvikbackend.onrender.com/api/items/getallitems")
             filterdItem1=res.data.filter(item=>item.category.toLowerCase()===category);
             let filter2=filterdItem1.sort((a, b) => {
                 const lowestPriceA = Math.min(parseFloat(a.prices), parseFloat(a.prices));
@@ -70,7 +70,7 @@ export const filterP=(searchkey,category)=>async dispatch=>{
            }
            else if (searchkey=='high to low' && category!=='all')
            {
-            const res=await axios.get("http://127.0.0.1:5002/api/items/getallitems")
+            const res=await axios.get("https://satvikbackend.onrender.com/api/items/getallitems")
             filterdItem1=res.data.filter(item=>item.category.toLowerCase()===category);
             let filter2=filterdItem1.sort((a, b) => {
                 const lowestPriceA = Math.min(parseFloat(a.prices), parseFloat(a.prices));
@@ -82,7 +82,7 @@ export const filterP=(searchkey,category)=>async dispatch=>{
             return;
            }
            else if (searchkey==='high to low' && category==='all'){
-            const res=await axios.get("http://127.0.0.1:5002/api/items/getallitems")
+            const res=await axios.get("https://satvikbackend.onrender.com/api/items/getallitems")
             // filterdItem1=res.data.filter(item=>item.category.toLowerCase()===category);
             let filter2=res.data.sort((a, b) => {
                 const lowestPriceA = Math.min(parseFloat(a.prices), parseFloat(a.prices));
@@ -94,7 +94,7 @@ export const filterP=(searchkey,category)=>async dispatch=>{
             return;
            }
           else{
-            const res=await axios.get("http://127.0.0.1:5002/api/items/getallitems")
+            const res=await axios.get("https://satvikbackend.onrender.com/api/items/getallitems")
             filterdItem1=res.data.filter(item=>item.category.toLowerCase()===category);
             dispatch({type:'GET_ITEMS_SUCCESS',payload:filterdItem1})
           }
