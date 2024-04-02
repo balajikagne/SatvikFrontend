@@ -4,7 +4,7 @@ export const placeOrder = (token, subtotal) => async (dispatch, getState) => {
   const currentUser = getState().loginUserReducer.currentUser;
   const cartItems = getState().addtoCartReducer.cartItems;
   try {
-    const res = await axios.post("http://127.0.0.1:5002/api/orders/placeorder", {
+    const res = await axios.post("https://satvikbackend.onrender.com/api/orders/placeorder", {
       token,
       subtotal,
       currentUser,
@@ -25,7 +25,7 @@ export const getUserOrders=()=>async (dispatch,getState)=>{
   dispatch({type:"USER_ORDER_REQ",
 });
 try{
-  const response=await axios.post("http://127.0.0.1:5002/api/orders/getuserorder",{
+  const response=await axios.post("https://satvikbackend.onrender.com/api/orders/getuserorder",{
     userid:currentUser._id,
   });
   dispatch({type:"USER_ORDER_SUCCESS",payload:response.data});
@@ -38,7 +38,7 @@ catch(error)
 export const getALLOrders = () => async (dispatch,getState) => {
     dispatch({ type: "ALL_ORDER_REQ" });
     try {
-      const res = await axios.get("https://bored-ruby-woolens.cyclic.app/api/orders/getallorders");
+      const res = await axios.get("https://satvikbackend.onrender.com/api/orders/getallorders");
       dispatch({ type: "ALL_ORDER_SUCCESS" ,payload:res.data});
       
     } catch (error) {
