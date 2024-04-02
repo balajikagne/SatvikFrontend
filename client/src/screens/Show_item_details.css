@@ -171,11 +171,11 @@
     }
     .detail_box > img{
         width: 80%;
-        height: 90%;
+        height: 50%;
     }
     .information_item{
         width: 50%;
-        height: 90%;
+        height: 60%;
         /* margin-top: 50px; */
         padding-right: 60px;
     }
@@ -183,6 +183,9 @@
     .information_item > h2{
         font-size: 3.4rem;
         margin-bottom: -30px;
+    }
+    .information_item > p{
+        font-size: 1rem;
     }
     #category_item{
         font-size: 1.8rem;
