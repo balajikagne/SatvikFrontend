@@ -62,7 +62,7 @@ function Navbar() {
         <div className='container_cart_1'>
         <a href="/cart" style={{textDecoration:'none'}}><i className="fa-solid fa-cart-shopping"></i></a>
               <div className="cart_value">
-                <p>{cartsize.cartItems.length}</p>
+                <p style={{paddingTop:'10px'}}>{cartsize.cartItems.length}</p>
               </div>
             </div>
         <div className="menus" onClick={toggleMenu}>
