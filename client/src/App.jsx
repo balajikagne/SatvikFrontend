@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import Navbar from './components/Navbar';
 import ShopScreen from './screens/ShopScreen';
@@ -20,22 +20,22 @@ const App = () => {
   return (
     <div>
       <Navbar/>
-       <BrowserRouter>
+       <Router>
         <Routes>
-          <Route path="/" component={HomeScreen} ></Route>
-<Route path="/shop" component={ShopScreen} ></Route>
-<Route path="/aboutus" component={AboutUsScreen} ></Route>
-<Route path="/contactus" component={ContactUs} ></Route>
-<Route path="/blogs" component={BlogsScreen} ></Route>
-<Route path="/login" component={LoginScreen} ></Route>
-<Route path="/signup" component={SignUp} ></Route>
-<Route path="/cart" component={CartScreen} ></Route>
-<Route path="/shop/item_details" component={Show_item_details} ></Route>
-<Route path="/blogchild" component={BlogChild} ></Route>
-<Route path="/myprofile" component={MyFormComponent} ></Route>
-<Route path="/orderOptions" component={OrderProductOptions} ></Route>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/shop" element={<ShopScreen/>} />
+          <Route path="/aboutus" element={<AboutUsScreen/>} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/blogs" element={<BlogsScreen />} />
+          <Route path="/login" element={<LoginScreen />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/cart" element={<CartScreen />} />
+          <Route path="/shop/item_details" element={<Show_item_details />} />
+          <Route path="/blogchild" element={<BlogChild />} />
+          <Route path="/myprofile" element={<MyFormComponent />} />
+          <Route path='/orderOptions' element={<OrderProductOptions/>}/>
         </Routes>
-      </BrowserRouter>
+      </Router>
       <Footer/>
     </div>
   )
