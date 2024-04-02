@@ -2,7 +2,6 @@ import axios from 'axios';
 import Swal from 'sweetalert2'
 export const registerUser=(userData)=>async dispatch=>{
     dispatch({type:'USER_REGISTER_REQ'})
-    // console.log(userData)
     try{
         const response=await axios.post('https://satvikbackend.onrender.com/api/users/register',userData)
         dispatch({type:'USER_REGISTER_SUCCESS'})
@@ -27,7 +26,6 @@ export const registerUser=(userData)=>async dispatch=>{
 }
 export const userAddress=(userAddress)=>async dispatch=>{
     dispatch({type:'USER_SETADDRESS_REQ'})
-    // console.log(userAddress)
     try{
         const response=await axios.post('https://satvikbackend.onrender.com/api/users/useraddress',userAddress)
         
@@ -60,7 +58,6 @@ export const userAddressData=(userId)=>async dispatch=>{
     }
 }
 export const loginUser=(userdata)=>async dispatch=>{
-    console.log(userdata)
     dispatch({type:'USER_LOGIN_REQ'})
     try{
         const response=await axios.post('https://satvikbackend.onrender.com/api/users/login',userdata)
