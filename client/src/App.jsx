@@ -20,22 +20,22 @@ const App = () => {
   return (
     <div>
       <Navbar/>
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="/shop" element={<ShopScreen />} />
-        <Route path="/aboutus" element={<AboutUsScreen />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/blogs" element={<BlogsScreen />} />
-        <Route path="/login" element={<LoginScreen />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/cart" element={<CartScreen />} />
-        <Route path="/shop/item_details" element={<Show_item_details />} />
-        <Route path="/blogchild" element={<BlogChild />} />
-        <Route path="/myprofile" element={<MyFormComponent />} />
-        <Route path="/orderOptions" element={<OrderProductOptions />} />
-      </Routes>
-    </BrowserRouter>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/shop" element={<ShopScreen/>} />
+          <Route path="/aboutus" element={<AboutUsScreen/>} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/blogs" element={<BlogsScreen />} />
+          <Route path="/login" element={<LoginScreen />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/cart" element={<CartScreen />} />
+          <Route path="/shop/item_details" element={<Show_item_details />} />
+          <Route path="/blogchild" element={<BlogChild />} />
+          <Route path="/myprofile" element={<MyFormComponent />} />
+          <Route path='/orderOptions' element={<OrderProductOptions/>}/>
+        </Routes>
+      </Router>
       <Footer/>
     </div>
   )
