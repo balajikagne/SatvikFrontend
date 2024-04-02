@@ -31,7 +31,6 @@ try{
   const firstpostIndex = lastPostindex - postPage;
   currentPost = items.slice(firstpostIndex, lastPostindex);
   
-  console.log(items)
   for (let i=0;i<items.length;i++)
   {
     if (items[i].category==='Ghee'){
@@ -47,7 +46,6 @@ try{
   }
 }
 catch(error){
-  console.log('No internet connection')
 }
 
 
