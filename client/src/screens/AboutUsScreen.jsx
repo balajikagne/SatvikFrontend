@@ -3,6 +3,7 @@ import "./about.css";
 import Carousel from "../components/Carousel";
 import poster from "../assets/IMG_2142.png"
 import founder from '../assets/founder.jpeg'
+import poster3 from '../assets/poster3.png'
 function AboutUsScreen() {
   return (
     <>
@@ -21,8 +22,8 @@ function AboutUsScreen() {
 
         <div className="About_third">
           <img
-            src="https://satvikdairy.in/wp-content/uploads/2024/02/5-1024x1024.jpg"
-            alt=""
+            src={poster3}
+            alt="about our product"
           />
           <div className="About_second">
             <h2>We Work Hard To Provide You The Best Quality Products...</h2>
@@ -59,11 +60,10 @@ function AboutUsScreen() {
               <h2>Ninad Mhatre</h2>
               <p>founder</p>
               <div className="social_media1">
-                <i class="fa-brands fa-facebook"><a href=""></a></i>
-                <i class="fa-brands fa-twitter"><a href=""></a></i>
-                <i class="fa-brands fa-square-instagram"><a href=""></a></i>
-                <i class="fa-brands fa-linkedin"><a href=""></a></i>
-              </div>
+              <a href="https://www.facebook.com/satvikgroup19" style={{textDecoration:"none",color:'black'}}><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/DairySatvi40615" style={{textDecoration:"none",color:'black'}}><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/satvik_milk_and_milk_product_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style={{textDecoration:"none",color:'black'}}><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UClMZ3bjAqHEIQFz3YmfTSPg" style={{textDecoration:"none",color:'black'}}><i class="fa-brands fa-youtube"></i></a>              </div>
             </div>
           </div>
         </div>
