@@ -56,9 +56,9 @@ function ContactUs() {
               <h3>Get Social</h3>
               </div>
               <div className="logo_container">
-      <i className="fab fa-facebook" style={{ color: '#1877f2' }}></i>
-      <i className="fab fa-twitter" style={{ color: '#1da1f2' }}></i>
-      <i className="fab fa-instagram" style={{ color: '#bc2a8d' }}></i>
+              <a href="https://www.facebook.com/satvikgroup19" style={{textDecoration:'none',fontSize:'2rem'}}><i className="fab fa-facebook" style={{ color: '#1877f2' }}></i></a>
+              <a href="https://twitter.com/DairySatvi40615" style={{textDecoration:'none',fontSize:'2rem'}}><i className="fab fa-twitter" style={{ color: '#1da1f2' }}></i></a>
+              <a href="https://www.instagram.com/satvik_milk_and_milk_product_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style={{textDecoration:'none',fontSize:'2rem'}}><i className="fab fa-instagram" style={{ color: '#bc2a8d' }}></i></a>
     </div>
     <div className="title2">
               <h3>Contact Info</h3>
@@ -70,7 +70,7 @@ function ContactUs() {
                 </div>
                 <div className="box2">
                 <i class="fa-solid fa-phone"></i>
-                <a href="">+917397793823</a>
+                <a href="tel:+917397793823">+917397793823</a>
                 </div>
                 <div className="box2">
                 <i class="fa-solid fa-envelope"></i>
