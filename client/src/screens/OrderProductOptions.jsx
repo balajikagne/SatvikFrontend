@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { placeOrder } from "../actions/OrderAction";
 import { userAddressData } from "../actions/userActions.jsx";
 import axios from "axios";
+import MyFormComponent from "./MyFormComponent.jsx";
 const OrderProductOptions = () => {
   const [paymentMethod, setPaymentMethod] = useState("");
   const [time,settime]=useState(new Date())
@@ -17,7 +18,9 @@ const OrderProductOptions = () => {
   console.log(currentAddress)
   var subtotal = cartItems.reduce((x, item) => x + item.price, 0);
   const handleCashOnDelivery = () => {
-    setPaymentMethod("Cash on Delivery");
+    if (currentAddress)
+    {
+      setPaymentMethod("Cash on Delivery");
     let ItemName=new Array(cartItems.length)
     let QuantityName=new Array(cartItems.length)
     let TotalPrice=0;
@@ -29,7 +32,7 @@ const OrderProductOptions = () => {
     console.log(ItemName,QuantityName,TotalPrice)
     let webHooKURL="https://discordapp.com/api/webhooks/1224349625188745266/psOAvtv38OnKRPmXUFS3iIRVR8kOUYcttV4B2DDOhonvDLriGkw27PDYHNxPRd1rKLcO"
     const datauser={
-      content :`--------------------------------------------------->NEW\n TIME :${time} \n NAME :${currentUser.name} \n STREET: ${currentAddress.shippingAddress}\n CITY: ${currentAddress.location}\n  MOBNUMBER: ${currentUser.mobNumber}\n Name of Items: ${ItemName}\n Quantity: ${QuantityName}\n Total Prices: ${TotalPrice}\n`,
+      content :`--------------------------------------------------->NEW\n TIME :${time} \n NAME :${currentAddress.name} \n STREET: ${currentAddress.shippingAddress}\n CITY: ${currentAddress.location}\n  MOBNUMBER: ${currentAddress.mobNumber}\n Name of Items: ${ItemName}\n Quantity: ${QuantityName}\n Total Prices: ${TotalPrice}\n PAYMENT MODE:${"Cash on Delivery"}`,
       tts:false,
       color:'white',
     }
@@ -44,15 +47,26 @@ const OrderProductOptions = () => {
         dispatch(placeOrder(currentAddress, subtotal));
         window.location.href = "/myprofile";
       } else {
-        window.location.href = "/cart";
+        window.location.href = "/myprofile";
       }
     });
 
     dispatch(placeOrder(currentAddress, subtotal));
+    }
+    else{
+      Swal.fire({
+        title: "Please add all details",
+        text: "Thank You",
+        icon: "warning",
+        confirmButtonText: "OK",
+      })
+    }
   };
 
   const handleOnlinePayment = () => {
-    setPaymentMethod("Online Payment");
+    if (currentAddress)
+    {
+      setPaymentMethod("Online Payment");
     let ItemName=new Array(cartItems.length)
     let QuantityName=new Array(cartItems.length)
     let TotalPrice=0;
@@ -64,12 +78,35 @@ const OrderProductOptions = () => {
     console.log(ItemName,QuantityName,TotalPrice)
     let webHooKURL="https://discordapp.com/api/webhooks/1224349625188745266/psOAvtv38OnKRPmXUFS3iIRVR8kOUYcttV4B2DDOhonvDLriGkw27PDYHNxPRd1rKLcO"
     const datauser={
-      content :`--------------------------------------------------->NEW\n TIME :${time} \n NAME :${currentUser.name} \n STREET: ${currentAddress.shippingAddress}\n CITY: ${currentAddress.location}\n  MOBNUMBER: ${currentUser.mobNumber}\n Name of Items: ${ItemName}\n Quantity: ${QuantityName}\n Total Prices: ${TotalPrice}\n`,
+      content :`--------------------------------------------------->NEW\n TIME :${time} \n NAME :${currentAddress.name} \n STREET: ${currentAddress.shippingAddress}\n CITY: ${currentAddress.location}\n  MOBNUMBER: ${currentAddress.mobNumber}\n Name of Items: ${ItemName}\n Quantity: ${QuantityName}\n Total Prices: ${TotalPrice}\n PAYMENT MODE:${"Online Payment"}`,
       tts:false,
       color:'white',
     }
     let  res =axios.post(webHooKURL,datauser)
+    Swal.fire({
+      title: "Thank you for Ordering",
+      text: "Thank You",
+      icon: "success",
+      confirmButtonText: "OK",
+    }).then((result) => {
+      if (result && currentAddress) {
+        dispatch(placeOrder(currentAddress, subtotal));
+        // window.location.href = "/myprofile";
+      } else {
+        // window.location.href = "/cart";
+      }
+    });
+
     dispatch(placeOrder(currentAddress, subtotal));
+    }
+    else{
+      Swal.fire({
+        title: "Please add all details",
+        text: "Thank You",
+        icon: "warning",
+        confirmButtonText: "OK",
+      })
+    }
   };
 
   try {
@@ -83,21 +120,22 @@ const OrderProductOptions = () => {
   useEffect(() => {
     if (localStorage.getItem("currentUser") === null) {
       Swal.fire({
-        title: "Please Login",
+        title: "Please Create account",
         text: "Thank You",
         icon: "warning",
         confirmButtonText: "OK",
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
-          window.location.href = "/login";
+          window.location.href = "/signup";
         } else {
-          window.location.href = "/login";
+          window.location.href = "/signup";
         }
       });
     }
   }, []);
   return (
+    <>
     <div className="order-options">
       <h2>Select Payment Method</h2>
       <button onClick={handleCashOnDelivery}>Cash on Delivery</button>
@@ -133,6 +171,10 @@ const OrderProductOptions = () => {
         <></>
       )}
     </div>
+     <div style={{marginTop:"-50px"}}>
+     <MyFormComponent/>
+   </div>
+   </>
   );
 };
 
