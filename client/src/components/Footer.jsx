@@ -8,25 +8,25 @@ function Footer() {
             <img src="http://satvikdairy.in/wp-content/uploads/2024/02/cropped-Picsart_24-02-06_11-38-07-241-300x267.png" alt="" />
             <h2>Simply Natural</h2>
             <div className='social_media'>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.facebook.com/satvikgroup19" style={{textDecoration:"none",color:'black'}}><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/DairySatvi40615" style={{textDecoration:"none",color:'black'}}><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/satvik_milk_and_milk_product_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style={{textDecoration:"none",color:'black'}}><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UClMZ3bjAqHEIQFz3YmfTSPg" style={{textDecoration:"none",color:'black'}}><i class="fa-brands fa-youtube"></i></a>
             </div>
 
         </div>
         <div className='Footer_box_2'>
             <h2>Quick Access</h2>
-            <a href="/">Home</a>
-            <a href="/shop">Shop</a>
-            <a href="/contactus">Contact Us</a>
-            <a href="/aboutus">About Us</a>
+            <a href="/" style={{textDecoration:"none",color:'black'}}>Home</a>
+            <a href="/shop" style={{textDecoration:"none",color:'black'}}>Shop</a>
+            <a href="/contactus" style={{textDecoration:"none",color:'black'}}>Contact Us</a>
+            <a href="/aboutus" style={{textDecoration:"none",color:'black'}}>About Us</a>
         </div>
         <div className='Footer_box_2'>
             <h2>Important Links</h2>
-            <a href="/cart">Cart</a>
-            <a href="/myprofile">Checkout</a>
-            <a href="/login">Login</a>
+            <a href="/cart" style={{textDecoration:"none",color:'black'}}>Cart</a>
+            <a href="/myprofile" style={{textDecoration:"none",color:'black'}}>Checkout</a>
+            <a href="/login" style={{textDecoration:"none",color:'black'}}>Login</a>
         </div>
         <div className='Footer_box_3'>
             <h2>Experience the Purest Goodness: Satvik Milk & Milk Products</h2>
