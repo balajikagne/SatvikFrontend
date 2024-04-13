@@ -1,7 +1,8 @@
 import React from "react";
 import "./Offer.css";
 import poster from "../assets/poster1.png"
-import product1 from "../assets/product1.png";
+import product1 from "../assets/product2.png";
+import Slideshow from "./Slideshow";
 function Offers() {
   function shoppage(){
     window.location.href='/shop'
@@ -10,13 +11,13 @@ function Offers() {
     <>
       <div className="container_main">
         <div className="container_offer">
-          <div className="first_container1">
-            <div className="alltitles">
+          <div>
+            {/* <div className="alltitles">
               <h4 style={{color:"white"}}>Buy Organic Milk Products</h4>
               <h2 style={{color:"white"}}>At the Best Price Available</h2>
               <button className="shopnow" onClick={()=>{shoppage()}}>Shop Now</button>
-            </div>
-            <img src={poster}></img>
+            </div> */}
+            <Slideshow/>
           </div>
 
           <div className="second_container1">
