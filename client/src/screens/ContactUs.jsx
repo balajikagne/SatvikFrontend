@@ -1,38 +1,50 @@
-import React from "react";
 import "./contactus.css";
-import poster from "../assets/IMG_2142.png"
-import { useState } from "react";
+import poster from "../assets/IMG_2142.png";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+import Swal from "sweetalert2";
 function ContactUs() {
+  const form = useRef();
   const [name, setName] = useState("");
-  const [emailData, setEmailData] = useState({
-    to: "kagnebalaji171@gmail.com",
-    UserId:'',
-    subject: "",
-    message: "",
-  });
-  const [subject, setSubject] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const MessageSent = () => {
-    emailjs
-      .send(
-        "service_h5tz2bi",
-        "template_50xjld1",
-        emailData,
-        "kagnebalaji171@gmail.com"
-      )
-      .then((response) => {
-        console.log("Email sent successfully:", response);
-      })
-      .catch((error) => {
-        console.error("Error sending email:", error);
-      });
-  };
-  const handleChange = (e) => {
-    setEmailData({
-      ...emailData,
-      [e.target.name]: e.target.value,
-    });
-    console.log(emailData.UserId)
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+     console.log(form.current)
+     const formData = {
+      name,
+      email,
+      phone,
+      message,
+    };
+     emailjs.sendForm(
+      'service_embz3s6', 
+      'template_xl9560w', 
+      form.current, 
+      'igR-yc13C33Kh_xMF'
+  )
+  .then(
+      (result) => {
+        Swal.fire({
+          title:"Thank For Feedback",
+          text:'Thank You',
+          icon:'success',
+          confirmButtonText: "OK",
+        }).then((resule)=>{
+          if(resule){
+            window.location.href='/contactus'
+          }
+          else{
+            window.location.href='/contactus'
+          }
+        })
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
   };
   return (
     <>
@@ -81,28 +93,28 @@ info@shive.life</a>
             </div>
             {/* <div className="box2"></div> */}
           </div>
-          <div className="form_container">
+          <form className="form_container" ref={form} onSubmit={sendEmail}>
             <p>Get In Touch with Us</p>
             <div className="child1">
               <label htmlFor="">Your Name</label>
-            <input type="text" />
+            <input type="text" name="user_name" onChange={(e)=>{setName(e.target.value)}}/>
             </div>
             <div className="child1">
               <label htmlFor="">Email</label>
-            <input type="text" />
+            <input type="text" name="user_email" onChange={(e)=>{setEmail(e.target.value)}}/>
             </div>
             <div className="child1">
-              <label htmlFor="">Phone No.</label>
-            <input type="text" />
+              <label htmlFor="phone">Phone No.</label>
+            <input type="text" name='phone' onChange={(e)=>{setPhone(e.target.value)}}/>
             </div>
             <div className="child1">
-              <label htmlFor="">Message</label>
-            <textarea type="text" />
+              <label htmlFor="message">Message</label>
+            <textarea type="text" name="message" onChange={(e)=>{setMessage(e.target.value)}}/>
             </div>
             <div className="child3">
-              <button>Submit</button>
+              <button type="submit">Submit</button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </>
