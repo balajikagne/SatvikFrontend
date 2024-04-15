@@ -417,35 +417,7 @@ const MyFormComponent = () => {
         </>
       )}
 
-      <h3 id="my_order">My Orders</h3>
-      <div className="Myorders_is">
-        {loading ? (
-          <Loading />
-        ) : error ? (
-          <Error />
-        ) : (
-          <>
-           {Array.isArray(orders) ? (
-  orders.map((order) => (
-    <div key={order._id}>
-      {order.orderItems?.map((item) => (
-        <div key={item._id} className="myorder_box">
-          <div className="child_myorder">
-            <p>Item Name: {item.name}</p>
-            <p>Quantity: {item.quantity}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  ))
-) : (
-  <p style={{color:"red",textAlign:"center"}}>No Internet Connection</p>
-)}
-
-          </>
-        )}
-      </div>
-      <hr />
+      
     </>
   );
 };
