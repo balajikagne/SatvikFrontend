@@ -6,7 +6,7 @@ function Footer() {
     <>
       <div className='Footer_Container'>
         <div className='Footer_box_1'>
-            <img src={logo} alt="" />
+            <img src={logo} alt="satvikdairy" />
             <h2>Simply Natural</h2>
             <div className='social_media'>
             <a href="https://www.facebook.com/satvikgroup19" style={{textDecoration:"none",color:'black'}}><i class="fa-brands fa-facebook"></i></a>
