@@ -3,6 +3,7 @@ import "./Review.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllitems } from "../actions/ItemAction";
 function Review() {
+    const dispatch=useDispatch()
   const allitems=useSelector(item=>item.getAllitemsReducer)
   const {items,loading,error}=allitems;
    useEffect(() => {
