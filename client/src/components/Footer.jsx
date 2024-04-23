@@ -1,11 +1,12 @@
 import React from 'react'
+import logo from '../assets/logo.png';
 import "./Footer.css"
 function Footer() {
   return (
     <>
       <div className='Footer_Container'>
         <div className='Footer_box_1'>
-            <img src="http://satvikdairy.in/wp-content/uploads/2024/02/cropped-Picsart_24-02-06_11-38-07-241-300x267.png" alt="" />
+            <img src={logo} alt="" />
             <h2>Simply Natural</h2>
             <div className='social_media'>
             <a href="https://www.facebook.com/satvikgroup19" style={{textDecoration:"none",color:'black'}}><i class="fa-brands fa-facebook"></i></a>
