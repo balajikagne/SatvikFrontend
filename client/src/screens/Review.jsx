@@ -1,13 +1,19 @@
 import React from "react";
 import "./Review.css";
+import { getAllitems } from "../actions/ItemAction";
 function Review() {
+  const allitems=useSelector(item=>item.getAllitemsReducer)
+  const {items,loading,error}=allitems;
+   useEffect(() => {
+    dispatch(getAllitems());
+  }, []);
   return (
     <>
       <div className="Outer_review">
         <p>Review yet not submit</p>
         <div className="review_box">
            <div className="r_box_1">
-            <p style={{fontSize:'30px'}}>Be the first to review “Barfi”</p>
+            <p style={{fontSize:'30px'}}>{items.dsc}</p>
             <p style={{fontSize:'20px',marginBottom:'-10px',marginTop:'-10px'}}>Your email address will not be published. Required fields are marked *</p>
            </div>
            
