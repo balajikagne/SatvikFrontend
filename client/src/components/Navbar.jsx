@@ -50,7 +50,7 @@ function Navbar() {
             <li><a href='/aboutus'>About Us</a></li>
             <li><a href='/contactus'>Contact Us</a></li>
             <li><a href='/blogs'>Blogs</a></li>
-            {currentUser ? (<><li><a onClick={()=>{logout()}}>LogOut</a></li></>):(<><li><a href='/login'>Login</a></li></>)}
+            {currentUser ? (<><li style={{cursor:'pointer'}}><a onClick={()=>{logout()}}>LogOut</a></li></>):(<><li><a href='/login'>Login</a></li></>)}
             <div className='container_cart'>
               <a href="/cart" style={{textDecoration:'none'}}><i className="fa-solid fa-cart-shopping"></i></a>
               <div className="cart_value">
@@ -77,7 +77,7 @@ function Navbar() {
               <li><a href='/aboutus'>About Us</a></li>
               <li><a href='/contactus'>Contact Us</a></li>
               <li><a href='/blogs'>Blogs</a></li>
-              {currentUser ? (<><li><a onClick={()=>{logout()}}>LogOut</a></li></>):(<><li><a href='/login'>Login</a></li></>)}
+              {currentUser ? (<><li style={{cursor:'pointer'}}><a onClick={()=>{logout()}}>LogOut</a></li></>):(<><li><a href='/login'>Login</a></li></>)}
               <div className='container_cart'>
                 <i className="fa-solid fa-cart-shopping"></i>
               </div>
