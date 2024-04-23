@@ -28,8 +28,20 @@ export const userAddress=(userAddress)=>async dispatch=>{
     dispatch({type:'USER_SETADDRESS_REQ'})
     try{
         const response=await axios.post('https://satvikbackend.onrender.com/api/users/useraddress',userAddress)
-        
         dispatch({type:'USER_SETADDRESS_SUCCESS'})
+         Swal.fire({
+            title:"Data Saved Successfully",
+            text:'Thank You',
+            icon:'success',
+            confirmButtonText: "OK",
+          }).then((result)=>{
+            if (result){
+             window.location.href='/orderOptions'
+            }
+            else{
+             window.location.href='/orderOptions'
+            }
+         })
     }
     catch(error){
         dispatch({type:'USER_SETADDRESS_FAILED',payload:error})
@@ -39,8 +51,20 @@ export const upDateuserAddress=(userAddress)=>async dispatch=>{
     dispatch({type:'USER_SETADDRESS_REQ'})
     try{
         const response=await axios.post('https://satvikbackend.onrender.com/api/users/updateuseraddress',userAddress)
-        
         dispatch({type:'USER_SETADDRESS_SUCCESS'})
+        Swal.fire({
+            title:"Data Saved Successfully",
+            text:'Thank You',
+            icon:'success',
+            confirmButtonText: "OK",
+          }).then((result)=>{
+            if (result){
+             window.location.href='/orderOptions'
+            }
+            else{
+             window.location.href='/orderOptions'
+            }
+         })
         
     }
     catch(error){
