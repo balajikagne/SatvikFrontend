@@ -41,7 +41,7 @@ export const upDateuserAddress=(userAddress)=>async dispatch=>{
         const response=await axios.post('https://satvikbackend.onrender.com/api/users/updateuseraddress',userAddress)
         
         dispatch({type:'USER_SETADDRESS_SUCCESS'})
-        window.location.href='/myprofile'
+        
     }
     catch(error){
         dispatch({type:'USER_SETADDRESS_FAILED',payload:error})
