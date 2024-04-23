@@ -182,7 +182,7 @@ const MyFormComponent = () => {
               <div className="user-profile-container">
                 {/* section 01 */}
                 <div className="section1">
-                  <div className="image"></div>
+{/*                   <div className="image"></div> */}
                   <div className="content">
                     <p id="address">
                       Name: {currentAddress?.name} {currentAddress?.surName}
