@@ -13,6 +13,9 @@ import CartScreen from './screens/CartScreen';
 import Show_item_details from './screens/Show_item_details';
 import BlogChild from './screens/BlogChild';
 import MyFormComponent from './screens/MyFormComponent';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // import Read_More from './components/Read_More';
 import 'bootstrap';
 import OrderProductOptions from './screens/OrderProductOptions';
@@ -20,6 +23,17 @@ const App = () => {
   return (
     <div>
       <Navbar/>
+      <ToastContainer 
+    position="top-center"  // Set the position to bottom center
+    autoClose={1000}  // Adjust the auto-close duration in milliseconds (e.g., 3000 for 3 seconds)
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    />
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeScreen />} />
