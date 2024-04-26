@@ -36,11 +36,11 @@ const MyFormComponent = () => {
   const [shippingAddress, setShippingAddress] = useState("");
   function SaveChanges() {
     if (
-      name === "" &&
-      location === "" &&
-      pincode === "" &&
-      surname === "" &&
-      mobile === "" &&
+      name === "" ||
+      location === "" ||
+      pincode === "" ||
+      surname === "" ||
+      mobile === "" ||
       email === ""
     ) {
       alert("Please enter all details");
@@ -53,6 +53,7 @@ const MyFormComponent = () => {
         mobile: mobile,
         location: location,
         shippingAddress: shippingAddress,
+        
       };
       // dispatch(userAddress(userAdd));
       dispatch(upDateuserAddress(userAdd));
