@@ -63,11 +63,12 @@ function CartScreen() {
               <div className="item-details">
                 <h3>{item.name}</h3>
                 <p>Quantity: {item.quantity}</p>
+                <p>Variant: {item.variant_dsc}</p>
                 <p>Price: Rs {item.price}</p>
                 <div className="btn_box">
-                <i className="fa-solid fa-plus" area-hidden="true" onClick={()=>{dispatch(addToCart(item,item.quantity+1))}}></i>
+                <i className="fa-solid fa-plus" area-hidden="true" onClick={()=>{dispatch(addToCart(item,item.variant,item.quantity+1,item.variant_dsc))}} style={{cursor:"pointer"}}></i>
                 <b>{item.quantity}</b>
-                <i className="fa-solid fa-minus" area-hidden="true" onClick={()=>{dispatch(addToCart(item,item.quantity-1))}}></i>
+                <i className="fa-solid fa-minus" area-hidden="true" onClick={()=>{dispatch(addToCart(item,item.variant,item.quantity-1,item.variant_dsc))}} style={{cursor:"pointer"}}></i>
                 </div>
                 <button className="delete_btn" onClick={()=>{dispatch(deleteFromCart(item))}}>Delete</button>
               </div>
