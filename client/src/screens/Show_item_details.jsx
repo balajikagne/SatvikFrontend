@@ -10,6 +10,7 @@ function Show_item_details() {
   const [make, setMake] = useState(true);
   const [number, setNumber] = useState(1);
   const [varient, setVarient] = useState('frist');
+  const [varient_1, setVariant] = useState(location.state.varient[0][varient]);
   const dispatch = useDispatch();
   function addTo() {
     const item = {
@@ -26,6 +27,7 @@ function Show_item_details() {
   }
   function varientAdd(e) {
     setVarient(e)
+    setVariant(location.state.varient[0][e])
   }
   console.log(location.state.field[0]['frist'])
   return (
@@ -48,6 +50,7 @@ function Show_item_details() {
                   <p>Rs {location.state.oldPrice}</p>
                   <h4>{location.state.field[0][varient] * number}</h4>
                 </div>
+                <h2 style={{marginBottom:"20px"}}>{varient_1}</h2>
                 <div className="item_info_description"></div>
                 <p>{location.state.dsc}</p>
                 <div className="button_info">
