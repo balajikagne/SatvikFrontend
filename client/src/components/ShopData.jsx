@@ -36,18 +36,18 @@ function ShopData({item}) {
                  src={item.img}
                  alt={item.name}
                  onClick={()=>{More_info(item)}}
-                 style={{cursor:"pointer"}}
+                 style={{cursor:"pointer",marginTop:"20px"}}
                />
-               <div className="price_varient"><h4>{item.name}</h4>
-               <h4>{item.varient[0]['frist']}</h4>
-               <div className="price_box" onClick={()=>{More_info(item)}}>
+               <div className="price_varient"><h4 style={{textAlign:'center',fontSize:"1.2rem",marginBottom:"-8px"}}>{item.name}</h4>
+               <h4 style={{textAlign:'center',marginBottom:"4px"}}>{item.varient[0]['frist']}</h4>
+               <div className="price_box" onClick={()=>{More_info(item)}} style={{marginLeft:"8px"}}>
                 <p style={{color:'grey', textDecoration: "line-through" }}>{item.oldPrice}</p>
-                <p>Rs {item.field[0]['frist']}</p>
+                <p style={{textAlign:'center'}}>Rs {item.field[0]['frist']}</p>
                </div>
                </div>
                
                <div className="star_Shop_Container">{start}</div>
-               <button className="Shop_Container" onClick={addtocart}>
+               <button className="Shop_Container" onClick={addtocart} style={{marginBottom:"20px"}}>
 Add To Cart</button>
              </div>
            </div>
