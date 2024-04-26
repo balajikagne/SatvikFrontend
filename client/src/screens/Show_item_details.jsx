@@ -27,6 +27,7 @@ function Show_item_details() {
   function varientAdd(e) {
     setVarient(e)
   }
+  console.log(location.state.field[0]['frist'])
   return (
     <>
       <div className="Shop_container1_item_details">
