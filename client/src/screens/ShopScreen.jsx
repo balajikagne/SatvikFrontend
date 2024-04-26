@@ -16,7 +16,7 @@ function ShopScreen() {
   const [category,setcategory]=useState('all');
   const dispatch=useDispatch()
   const [currentPage, setCurrentpage] = useState(1);
-  const [postPage, setPostpage] = useState(10);
+  const [postPage, setPostpage] = useState(9);
   const allitems=useSelector(item=>item.getAllitemsReducer)
   const {items,loading,error}=allitems;
   let currentPost=0;
@@ -101,9 +101,9 @@ catch(error){
                   alt=""
                 />
                 <h4>Chocalate Barfi</h4>
-                <div>
-                  <h3>₹300</h3>
+                <div style={{display:'flex',justifyContent:"center",alignItems:"center",gap:"20px",marginBottom:'20px',marginTop:'-30px'}}>
                   <span style={{ textDecoration: "line-through" }}>₹600</span>
+                  <h3>₹300</h3>
                 </div>
               </div>
               <div className="child_box">
@@ -112,9 +112,9 @@ catch(error){
                   alt=""
                 />
                 <h4>Ghee Pack of 1kg</h4>
-                <div>
-                  <h3>₹650</h3>
+                <div style={{display:'flex',justifyContent:"center",alignItems:"center",gap:"20px",marginBottom:'20px',marginTop:'-30px'}}>
                   <span style={{ textDecoration: "line-through" }}>₹600</span>
+                  <h3>₹650</h3>
                 </div>
               </div>
               <div className="child_box">
@@ -123,9 +123,9 @@ catch(error){
                   alt=""
                 />
                 <h4>PURE COW GHEE</h4>
-                <div>
-                  <h3>₹650</h3>{" "}
+                <div style={{display:'flex',justifyContent:"center",alignItems:"center",gap:"20px",marginBottom:'20px',marginTop:'-30px'}}>
                   <span style={{ textDecoration: "line-through" }}>₹600</span>
+                  <h3>₹650</h3>{" "}
                 </div>
               </div>
             </div>
