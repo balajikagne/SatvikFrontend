@@ -55,7 +55,7 @@ function AboutUsScreen() {
               <img
                 src={founder}
                 alt="founder"
-                style={{height:'450px',width:'400px'}}
+                style={{height:'400px',width:'400px'}}
               />
               <h2>Ninad Mhatre</h2>
               <p>founder</p>
@@ -72,9 +72,9 @@ function AboutUsScreen() {
             <h1>Melt into happiness of our products...!!!</h1>
             <a href="/shop">Go To Shop</a>
           </div>
-          <div className="box2">
+          {/* <div className="box2">
             <Carousel />
-          </div>
+          </div> */}
         </div>
       </div>
     </>
