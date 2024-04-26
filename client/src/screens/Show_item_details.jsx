@@ -70,6 +70,7 @@ function Show_item_details() {
                     onClick={() => {
                       varientAdd("frist");
                     }}
+                    style={{cursor:"pointer"}}
                   >
                     {location.state.varient[0]['frist']}
                   </button>
@@ -77,6 +78,7 @@ function Show_item_details() {
                     onClick={() => {
                       varientAdd("second");
                     }}
+                    style={{cursor:"pointer"}}
                   >
                     {location.state.varient[0]['second']}
                   </button>
@@ -84,6 +86,7 @@ function Show_item_details() {
                     onClick={() => {
                       varientAdd("third");
                     }}
+                    style={{cursor:"pointer"}}
                   >
                     {location.state.varient[0]['third']}
                   </button>
