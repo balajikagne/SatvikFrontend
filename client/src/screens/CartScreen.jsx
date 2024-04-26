@@ -59,7 +59,7 @@ function CartScreen() {
         <div>
           {cartItems.map((item) => (
             <div key={item._id} className="cart-item">
-              <img src={item.img} alt={item.name} />
+              <img src={item.img} alt={item.name}/>
               <div className="item-details">
                 <h3>{item.name}</h3>
                 <p>Quantity: {item.quantity}</p>
