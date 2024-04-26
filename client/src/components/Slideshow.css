@@ -9,9 +9,8 @@
     width: 100%;
 	}
 	.Imageslide{
-	  height: 650px;
-	  width: 100%;
-	  
+	  height: 600px;
+	  width: 92vw;
 	}
   }
   @media (max-width:500px)
@@ -22,9 +21,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }.Imageslide{
+    }
+    .Imageslide{
       height: 230px;
-      width: 100%;
+      width: 92vw;
       
     }
   }
@@ -32,7 +32,7 @@
   position: absolute;
   top: 50%;
   right: 32px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color:black;
   z-index: 10;
   cursor: pointer;
@@ -42,7 +42,7 @@
   position: absolute;
   top: 50%;
   left: 32px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color:black;
   z-index: 10;
   cursor: pointer;
