@@ -41,7 +41,7 @@ function ShopData({item}) {
                <div className="price_varient"><h4>{item.name}</h4>
                <h4>{item.varient[0]['frist']}</h4>
                <div className="price_box" onClick={()=>{More_info(item)}}>
-                <p style={{color:'grey', textDecoration: "line-through" }}>Rs 500</p>
+                <p style={{color:'grey', textDecoration: "line-through" }}>{item.oldPrice}</p>
                 <p>Rs {item.field[0]['frist']}</p>
                </div>
                </div>
