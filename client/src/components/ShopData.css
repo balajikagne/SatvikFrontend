@@ -1,6 +1,6 @@
 @media (min-width:768px){
     .ShapData_Container{
-        height: 450px;
+        height: 100%;
         width: 250px;
         display: flex;
         flex-direction: column;
@@ -61,6 +61,9 @@
         background-color: #fff;
         cursor: pointer;
       }
+      .price_box{
+        margin: -20px;
+      }
 }
 @media (max-width:760px)
 {
@@ -71,6 +74,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 70px;
+        
     }
     .ShopData_Inner_Container{
         display: flex;
