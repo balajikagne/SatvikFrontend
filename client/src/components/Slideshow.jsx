@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
-import poster1 from "../assets/poster1.png";
+// import poster1 from "../assets/poster1.png";
 import './Slideshow.css'
 import { slideImages } from "./SlideImages";
 function Slideshow() {
