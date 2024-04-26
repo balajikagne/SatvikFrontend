@@ -3,10 +3,11 @@ import "./ShopData.css";
 import { addToCart } from "../actions/cartAction";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
 function ShopData({item}) {
-    const dispatch=useDispatch()
-    const navigate=useNavigate()
-    const [start,setStar]=useState('⭐')
+    const dispatch=useDispatch();
+    const navigate=useNavigate();
+    const [start,setStar]=useState('⭐');
     function startFunction(){
         let stars = '';
         for (let i = 0; i < item.rate; i++) {
@@ -19,12 +20,14 @@ function ShopData({item}) {
        
     },[])
     const addtocart=()=>{
-      dispatch(addToCart(item,1));
+      toast.success('Successfully added');
+      dispatch(addToCart(item,'frist',1,item.varient[0]['frist']));
     }
 
    const More_info=()=>{
     navigate('/shop/item_details',{state:item})
     }
+    console.log(item.field[0]['frist'])
   return (
     <>
       <div className="ShapData_Container" key={item.id} >
@@ -35,11 +38,14 @@ function ShopData({item}) {
                  onClick={()=>{More_info(item)}}
                  style={{cursor:"pointer"}}
                />
-               <h4>{item.name}</h4>
+               <div className="price_varient"><h4>{item.name}</h4>
+               <h4>{item.varient[0]['frist']}</h4>
                <div className="price_box" onClick={()=>{More_info(item)}}>
                 <p style={{color:'grey', textDecoration: "line-through" }}>Rs 500</p>
-               <p>Rs {item.prices}</p>
+                <p>Rs {item.field[0]['frist']}</p>
                </div>
+               </div>
+               
                <div className="star_Shop_Container">{start}</div>
                <button className="Shop_Container" onClick={addtocart}>
 Add To Cart</button>
