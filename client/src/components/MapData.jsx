@@ -35,10 +35,12 @@ function MapData({item}) {
                  onClick={()=>{More_info(item)}}
                  style={{cursor:"pointer"}}
                />
-               <h4>{item.name}</h4>
+               <div className="price_varient"><h4>{item.name}</h4>
+               <h4>{item.varient[0]['frist']}</h4>
                <div className="price_box" onClick={()=>{More_info(item)}}>
                 <p style={{color:'grey', textDecoration: "line-through" }}>Rs 500</p>
-               <p>Rs {item.prices}</p>
+                <p>Rs {item.field[0]['frist']}</p>
+               </div>
                </div>
                <div className="star_Shop_Container">{start}</div>
                <button className="Shop_Container" onClick={addtocart}>
