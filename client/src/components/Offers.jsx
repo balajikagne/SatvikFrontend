@@ -1,6 +1,6 @@
 import React from "react";
 import "./Offer.css";
-import poster from "../assets/poster1.png"
+// import poster from "../assets/poster1.png"
 import product1 from "../assets/product2.png";
 import Slideshow from "./Slideshow";
 function Offers() {
