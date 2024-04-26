@@ -10,15 +10,20 @@ import { getAllitems } from "../actions/ItemAction";
 import Loading from '../components/Loading'
 import Error from '../components/Error'
 import {useDispatch,useSelector}from 'react-redux';
+import ShopData from "./ShopData";
+import { useNavigate } from "react-router";
 function Featured_Products() {
   
     const dispatch=useDispatch()
     const allitems=useSelector(item=>item.getAllitemsReducer)
     const {items,loading,error}=allitems;
-    console.log(items)
+    const navigate=useNavigate()
     useEffect(()=>{
       dispatch(getAllitems())
     },[])
+    function setADDRESS(){
+      navigate("/shop")
+    }
   return (
     <>
  
@@ -28,10 +33,13 @@ function Featured_Products() {
      </div>
       <div className="Outer_Container_feature">
         {loading ? (<Loading/>):error ? (<Error/>):(<>{items.slice(0,5).map((item)=>(
-             <MapData item={item}/>
+             <ShopData item={item}/>
         ))}</>)}
       </div>
-
+      <div className="button">
+      <button className="Shop_Container" onClick={()=>{setADDRESS()}} style={{cursor:"pointer"}}>
+Know More</button>
+      </div>
     </>
   );
 }
