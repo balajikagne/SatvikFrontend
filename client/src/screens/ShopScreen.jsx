@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./shopscreen.css";
 import ShopData from "../components/ShopData";
 import { useDispatch, useSelector } from "react-redux";
-import { filterP1,getAllitems } from "../actions/ItemAction";
+import { filterCategory,filterP1,getAllitems } from "../actions/ItemAction";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
 import barfi from '../assets/barfi.jpg';
@@ -67,6 +67,9 @@ catch(error){
     val++;
     setCurrentpage(val);
   }
+  function filterCat(e){
+    dispatch(filterCategory(e))
+  }
    const handlePriceChange = (event) => {
     const newMaxPrice = parseInt(event.target.value);
     setMaxPrice(newMaxPrice);
@@ -99,9 +102,9 @@ catch(error){
             <div className="box2">
               
               <div className="cnames">
-                <p>Ghee</p>
-                <p>milk products</p>
-                <p>Sweet</p>
+                <p onClick={()=>{filterCat('ghee')}} style={{cursor:"pointer"}}>Ghee</p>
+                <p onClick={()=>{filterCat('milk products')}} style={{cursor:"pointer"}}>milk products</p>
+                <p onClick={()=>{filterCat('sweets')}} style={{cursor:"pointer"}}>Sweet</p>
               </div>
               <div className="cvalues">
                 <p>({gheevalue})</p>
