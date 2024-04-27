@@ -29,7 +29,6 @@ function Show_item_details() {
     setVarient(e)
     setVariant(location.state.varient[0][e])
   }
-  console.log(location.state.field[0]['frist'])
   return (
     <>
       <div className="Shop_container1_item_details">
@@ -47,7 +46,7 @@ function Show_item_details() {
                 </a>
                 <h2>{location.state.name}</h2>
                 <div className="price_info">
-{/*                   <p>Rs {location.state.oldPrice}</p> */}
+                  {/* <p>Rs {location.state.oldPrice}</p> */}
                   <h4>₹ {location.state.field[0][varient] * number}</h4>
                 </div>
                 <h2 style={{marginBottom:"20px"}}>{varient_1}</h2>
@@ -70,30 +69,21 @@ function Show_item_details() {
                   </button>
                 </div>
                 <div className="button_info_varient">
-                  <button
-                    onClick={() => {
-                      varientAdd("frist");
-                    }}
-                    style={{cursor:"pointer"}}
-                  >
-                    {location.state.varient[0]['frist']}
-                  </button>
-                  <button
-                    onClick={() => {
-                      varientAdd("second");
-                    }}
-                    style={{cursor:"pointer"}}
-                  >
-                    {location.state.varient[0]['second']}
-                  </button>
-                  <button
-                    onClick={() => {
-                      varientAdd("third");
-                    }}
-                    style={{cursor:"pointer"}}
-                  >
-                    {location.state.varient[0]['third']}
-                  </button>
+                {location.state.varient.map((item) => (
+  <div key={item._id} className="button_info_varient">
+    {Object.keys(item).map((key) => (
+      <button
+        key={key}
+        onClick={() => {
+          varientAdd(key);
+        }}
+        style={{ cursor: "pointer" }}
+      >
+        {item[key]}
+      </button>
+    ))}
+  </div>
+))}
                 </div>
               </div>
             </div>
