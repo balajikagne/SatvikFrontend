@@ -233,7 +233,10 @@
     .first_box > .box2 >.cvalues{
         display: flex;
         flex-direction: column;
-        gap: 20%;
+        margin-top: 10px;
+    }
+    .first_box > .box2 >.cvalues >p{
+        margin-top: 5px;
     }
     .first_box >.box3_shop {
         display:flex;
