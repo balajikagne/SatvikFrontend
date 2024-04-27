@@ -44,7 +44,7 @@ function Show_item_details() {
                 <a href="" id="category_item">
                   sweet
                 </a>
-                <h2>{location.state.name}</h2>
+                <h2>{location.state.name} <span style={{fontSize:"1.5rem"}}>{location.state.type}</span></h2>
                 <div className="price_info">
                   {/* <p>Rs {location.state.oldPrice}</p> */}
                   <h4>₹ {location.state.field[0][varient] * number}</h4>
