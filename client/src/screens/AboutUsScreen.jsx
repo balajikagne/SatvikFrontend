@@ -3,7 +3,7 @@ import "./about.css";
 import Carousel from "../components/Carousel";
 import poster from "../assets/IMG_2142.png"
 import founder from '../assets/founder.jpeg'
-import poster3 from '../assets/poster3.png'
+import poster3 from '../assets/poster3.jpeg'
 function AboutUsScreen() {
   return (
     <>
