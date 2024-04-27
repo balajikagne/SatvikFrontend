@@ -29,7 +29,7 @@ function Featured_Products() {
  
      <div className="headline_feature">
      <b><p>-----Featured Products-----</p></b>
-        <p>SATVIK MILK AND MILK PRODUCTS </p>
+        <p style={{fontSize:'1rem'}}>SATVIK MILK AND MILK PRODUCTS </p>
      </div>
       <div className="Outer_Container_feature">
         {loading ? (<Loading/>):error ? (<Error/>):(<>{items.slice(0,5).map((item)=>(
