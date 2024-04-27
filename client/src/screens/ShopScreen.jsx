@@ -75,7 +75,7 @@ catch(error){
               <div className="prize_adjust">
                 <h3>₹ 0</h3>
 <input type="range" class="form-range" id="customRange1" style={{width:"70%",marginTop:'17px'}} onChange={()=>{}}></input>
-                <h3>₹ 100</h3>
+                <h3>₹ 2500</h3>
               </div>
             </div>
                <h2 style={{textAlign:'center'}}>categories</h2>
