@@ -102,3 +102,24 @@ export const filterP=(searchkey,category)=>async dispatch=>{
         console.log(error)
     }
 }
+export const filterP1 = (minPrice, maxPrice, category) => async (dispatch) => {
+    dispatch({ type: 'GET_ITEMS_REQ' });
+  
+    try {
+      const res = await axios.get("https://satvikbackend.onrender.com/api/items/getallitems");
+      let filteredItems;
+  
+      if (category === 'all') {
+        // Filter products based on price range
+        filteredItems = res.data.filter(item => parseFloat(item.field[0]['frist']) >= minPrice && parseFloat(item.field[0]['frist']) <= maxPrice);
+      } else {
+        // Filter products based on category and price range
+        filteredItems = res.data.filter(item => item.category.toLowerCase() === category && parseFloat(item.field[0]['frist']) >= minPrice && parseFloat(item.field[0]['frist']) <= maxPrice);
+      }
+  
+      dispatch({ type: 'GET_ITEMS_SUCCESS', payload: filteredItems });
+    } catch (error) {
+      dispatch({ type: 'GET_ITEMS_FAILED', payload: error });
+      console.log(error);
+    }
+  };
