@@ -23,8 +23,8 @@
     }
     .Blog_Image-container >img{
         width: 100%;
-        height: 350px;
-        filter: blur(5px);
+        height: 500px;
+        /* filter: blur(5px); */
     
     }
     .Blog_Image-overlay{
