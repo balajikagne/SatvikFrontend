@@ -49,7 +49,7 @@ function ContactUs() {
   return (
     <>
       <div className="ContactUs_Container">
-      <div className="Contact_first">
+      <div className="Contact_firs-t">
           <div class="Image-container">
             <img
               src={poster}
@@ -78,16 +78,16 @@ function ContactUs() {
               <div className="location_container">
                 <div className="box1">
                 <i class="fa-solid fa-location-dot"></i>
-                <p>1386, NARASIPURAM ROAD, Pullagavunda puthur ( North), Devarayapuram , Thondamuthur Block, Coimbatore, Tamil Nadu-641109</p>
+                <p>At. Otur(Kolmatha), Nagar Kalyan Highway, Nandalal Lawns, Tal. Junnar, Dist. Pune.</p>
                 </div>
                 <div className="box2">
                 <i class="fa-solid fa-phone"></i>
-                <a href="tel:+917397793823">+917397793823</a>
+                <a href="tel:+917397793823">+91 77758 54035</a>
                 </div>
                 <div className="box2">
                 <i class="fa-solid fa-envelope"></i>
                 <a href="">
-info@shive.life</a>
+                satvikdairysocial@gmail.com</a>
                 </div>
               </div>
             </div>
