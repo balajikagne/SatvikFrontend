@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./shopscreen.css";
 import ShopData from "../components/ShopData";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllitems } from "../actions/ItemAction";
+import { filterP1,getAllitems } from "../actions/ItemAction";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
 import barfi from '../assets/barfi.jpg';
@@ -17,6 +17,8 @@ function ShopScreen() {
   const dispatch=useDispatch()
   const [currentPage, setCurrentpage] = useState(1);
   const [postPage, setPostpage] = useState(9);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(2500);
   const allitems=useSelector(item=>item.getAllitemsReducer)
   const {items,loading,error}=allitems;
   let currentPost=0;
@@ -65,6 +67,11 @@ catch(error){
     val++;
     setCurrentpage(val);
   }
+   const handlePriceChange = (event) => {
+    const newMaxPrice = parseInt(event.target.value);
+    setMaxPrice(newMaxPrice);
+    dispatch(filterP1(minPrice, newMaxPrice, category)); // Dispatch action with price range
+  };
   return (
     <>
       <div className="Shop_container">
@@ -73,10 +80,20 @@ catch(error){
             <div className="box1">
               <h2>Filter By Prize</h2>
               <div className="prize_adjust">
-                <h3>₹ 0</h3>
-<input type="range" class="form-range" id="customRange1" style={{width:"70%",marginTop:'17px'}} onChange={()=>{}}></input>
-                <h3>₹ 2500</h3>
-              </div>
+      <h3>₹ {minPrice}</h3>
+      <input
+        type="range"
+        className="form-range"
+        id="customRange1"
+        style={{ width: "70%", marginTop: '17px' }}
+        min="0"
+        max="2500"
+        step="100"
+        value={maxPrice}
+        onChange={handlePriceChange}
+      />
+      <h3>₹ {maxPrice}</h3>
+    </div>
             </div>
                <h2 style={{textAlign:'center'}}>categories</h2>
             <div className="box2">
