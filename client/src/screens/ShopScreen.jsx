@@ -103,37 +103,26 @@ catch(error){
               
               <div className="cnames">
                 <p onClick={()=>{filterCat('ghee')}} style={{cursor:"pointer"}}>Ghee</p>
-                <p onClick={()=>{filterCat('milk products')}} style={{cursor:"pointer"}}>Milk products</p>
+                <p onClick={()=>{filterCat('milk products')}} style={{cursor:"pointer"}}>milk products</p>
                 <p onClick={()=>{filterCat('sweets')}} style={{cursor:"pointer"}}>Sweet</p>
               </div>
               <div className="cvalues">
                 <p>({gheevalue})</p>
                 <p>({milkproduct})</p>
                 <p>({sweetvalue})</p>
-
               </div>
             </div>
             <div className="box3_shop">
               <p>Hottest Deals</p>
-              <div className="child_box">
-                <img
-                  src={barfi}
-                  alt=""
-                />
-                <h4>Chocalate Barfi</h4>
-                <div style={{display:'flex',justifyContent:"center",alignItems:"center",gap:"20px",marginBottom:'20px',marginTop:'-30px'}}>
-                  <span style={{ textDecoration: "line-through" }}>₹600</span>
-                  <h3>₹300</h3>
-                </div>
-              </div>
+              
               <div className="child_box">
                 <img
                   src={uproduct1}
                   alt=""
                 />
-                <h4>Ghee Pack of 1kg</h4>
+                <h4>Pure Cow Ghee</h4>
                 <div style={{display:'flex',justifyContent:"center",alignItems:"center",gap:"20px",marginBottom:'20px',marginTop:'-30px'}}>
-                  <span style={{ textDecoration: "line-through" }}>₹600</span>
+                  <span style={{ textDecoration: "line-through" }}>₹700</span>
                   <h3>₹650</h3>
                 </div>
               </div>
@@ -142,10 +131,21 @@ catch(error){
                   src={uproduct3}
                   alt=""
                 />
-                <h4>PURE COW GHEE</h4>
+                <h4>Pure Buffalo Ghee</h4>
                 <div style={{display:'flex',justifyContent:"center",alignItems:"center",gap:"20px",marginBottom:'20px',marginTop:'-30px'}}>
-                  <span style={{ textDecoration: "line-through" }}>₹600</span>
-                  <h3>₹650</h3>{" "}
+                  <span style={{ textDecoration: "line-through" }}>₹800</span>
+                  <h3>₹730</h3>{" "}
+                </div>
+              </div>
+              <div className="child_box">
+                <img
+                  src={uproduct3}
+                  alt=""
+                />
+                <h4>Gir Cow Ghee</h4>
+                <div style={{display:'flex',justifyContent:"center",alignItems:"center",gap:"20px",marginBottom:'20px',marginTop:'-30px'}}>
+                  <span style={{ textDecoration: "line-through" }}>₹2200</span>
+                  <h3>₹1750</h3>{" "}
                 </div>
               </div>
             </div>
