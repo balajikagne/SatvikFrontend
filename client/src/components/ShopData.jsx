@@ -40,7 +40,7 @@ function ShopData({item}) {
                />
                <div className="price_varient"><h4 style={{textAlign:'center',fontSize:"1.2rem",marginBottom:"-8px"}}>{item.name}</h4>
                <h4 style={{textAlign:'center',marginBottom:"4px"}}>{item.varient[0]['frist']}</h4>
-               <div className="price_box" onClick={()=>{More_info(item)}} style={{marginLeft:"8px"}}>
+               <div className="price_box" onClick={()=>{More_info(item)}} style={{marginLeft:"10px"}}>
 {/*                 <p style={{color:'grey', textDecoration: "line-through" }}>{item.oldPrice}</p> */}
                 <p style={{textAlign:'center'}}>₹ {item.field[0]['frist']}</p>
                </div>
