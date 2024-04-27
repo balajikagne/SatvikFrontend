@@ -38,18 +38,17 @@ export const filterP=(searchkey,category)=>async dispatch=>{
       let  filterdItem1;
     try{
         console.log(searchkey,category)
-        
-            
            if (searchkey==='low to high' && category==='all')
            {
             const res=await axios.get("https://satvikbackend.onrender.com/api/items/getallitems")
             // filterdItem1=res.data.filter(item=>item.category.toLowerCase()===category);
             let filter2=res.data.sort((a, b) => {
-                const lowestPriceA = Math.min(parseFloat(a.prices), parseFloat(a.prices));
-                const lowestPriceB = Math.min(parseFloat(b.prices), parseFloat(b.prices));
-  
+                console.log(a.field[0]['frist'])
+                const lowestPriceA = Math.min(parseFloat(a.field[0]['frist']), parseFloat(a.field[0]['frist']));
+                const lowestPriceB = Math.min(parseFloat(b.field[0]['frist']), parseFloat(b.field[0]['frist']));
                 return lowestPriceA - lowestPriceB;
               })
+              console.log(filter2)
             dispatch({type:'GET_ITEMS_SUCCESS',payload:filter2})
             return;
            }
@@ -58,8 +57,8 @@ export const filterP=(searchkey,category)=>async dispatch=>{
             const res=await axios.get("https://satvikbackend.onrender.com/api/items/getallitems")
             filterdItem1=res.data.filter(item=>item.category.toLowerCase()===category);
             let filter2=filterdItem1.sort((a, b) => {
-                const lowestPriceA = Math.min(parseFloat(a.prices), parseFloat(a.prices));
-                const lowestPriceB = Math.min(parseFloat(b.prices), parseFloat(b.prices));
+                const lowestPriceA = Math.min(parseFloat(a.field[0]['frist']), parseFloat(a.field[0]['frist']));
+                const lowestPriceB = Math.min(parseFloat(b.field[0]['frist']), parseFloat(b.field[0]['frist']));
   
                 return lowestPriceA - lowestPriceB;
               })
@@ -71,8 +70,8 @@ export const filterP=(searchkey,category)=>async dispatch=>{
             const res=await axios.get("https://satvikbackend.onrender.com/api/items/getallitems")
             filterdItem1=res.data.filter(item=>item.category.toLowerCase()===category);
             let filter2=filterdItem1.sort((a, b) => {
-                const lowestPriceA = Math.min(parseFloat(a.prices), parseFloat(a.prices));
-                const lowestPriceB = Math.min(parseFloat(b.prices), parseFloat(b.prices));
+                const lowestPriceA = Math.min(parseFloat(a.field[0]['frist']), parseFloat(a.field[0]['frist']));
+                const lowestPriceB = Math.min(parseFloat(b.field[0]['frist']), parseFloat(b.field[0]['frist']));
   
                 return lowestPriceB - lowestPriceA;
               })
@@ -83,8 +82,8 @@ export const filterP=(searchkey,category)=>async dispatch=>{
             const res=await axios.get("https://satvikbackend.onrender.com/api/items/getallitems")
             // filterdItem1=res.data.filter(item=>item.category.toLowerCase()===category);
             let filter2=res.data.sort((a, b) => {
-                const lowestPriceA = Math.min(parseFloat(a.prices), parseFloat(a.prices));
-                const lowestPriceB = Math.min(parseFloat(b.prices), parseFloat(b.prices));
+                const lowestPriceA = Math.min(parseFloat(a.field[0]['frist']), parseFloat(a.field[0]['frist']));
+                const lowestPriceB = Math.min(parseFloat(b.field[0]['frist']), parseFloat(b.field[0]['frist']));
   
                 return lowestPriceB - lowestPriceA;
               })
