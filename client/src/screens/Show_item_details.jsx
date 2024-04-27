@@ -47,7 +47,7 @@ function Show_item_details() {
                 </a>
                 <h2>{location.state.name}</h2>
                 <div className="price_info">
-                  <p>Rs {location.state.oldPrice}</p>
+{/*                   <p>Rs {location.state.oldPrice}</p> */}
                   <h4>{location.state.field[0][varient] * number}</h4>
                 </div>
                 <h2 style={{marginBottom:"20px"}}>{varient_1}</h2>
