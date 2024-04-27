@@ -123,3 +123,16 @@ export const filterP1 = (minPrice, maxPrice, category) => async (dispatch) => {
       console.log(error);
     }
   };
+  export const filterCategory = (category) => async (dispatch) => {
+    dispatch({ type: 'GET_ITEMS_REQ' });
+  
+    try {
+      const res = await axios.get("https://satvikbackend.onrender.com/api/items/getallitems");
+      let filteredItems;
+        filteredItems = res.data.filter(item => item.category.toLowerCase()===category);  
+      dispatch({ type: 'GET_ITEMS_SUCCESS', payload: filteredItems });
+    } catch (error) {
+      dispatch({ type: 'GET_ITEMS_FAILED', payload: error });
+      console.log(error);
+    }
+  };
