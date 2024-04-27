@@ -35,10 +35,10 @@ try{
   
   for (let i=0;i<items.length;i++)
   {
-    if (items[i].category==='Ghee'){
+    if (items[i].category==='ghee'){
       gheevalue++;
     }
-    else if (items[i].category==='Sweets')
+    else if (items[i].category==='sweets')
     {
       sweetvalue++;
     }
@@ -103,7 +103,7 @@ catch(error){
               
               <div className="cnames">
                 <p onClick={()=>{filterCat('ghee')}} style={{cursor:"pointer"}}>Ghee</p>
-                <p onClick={()=>{filterCat('milk products')}} style={{cursor:"pointer"}}>milk products</p>
+                <p onClick={()=>{filterCat('milk products')}} style={{cursor:"pointer"}}>Milk products</p>
                 <p onClick={()=>{filterCat('sweets')}} style={{cursor:"pointer"}}>Sweet</p>
               </div>
               <div className="cvalues">
